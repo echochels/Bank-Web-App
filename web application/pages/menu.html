@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/style6.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">View Balance</a><i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li>Balance: 10000 naira</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">View Account Details</a><i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li>Name:</li>
+                                    <li>Account Number:</li>
+                                    <li>BVN:</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">View Recent Transactions</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">View Transaction History</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fas fa-exchange-alt"></i> Transfer</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Own Account Transfer</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Self Transfer</h3>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Destination Account</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Destination Account" selected>Select Destination Account
+                                    </option>
+                                    <option value="Kuda">KUDA</option>
+                                    <option value="Access Bank">Access Bank</option>
+                                    <option value="Zenith Bank">Zenith Bank</option>
+                                    <option value="UBA Bank">UBA Bank</option>
+                                    <option value="Wema Bank">Wema Bank</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Amount</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Enter Amount" name="amount"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Transaction Description</h4>
+                                <div class="input-box">
+                                    <input type="text" class="input-field" placeholder="Description" name="Description"
+                                        required />
+                                </div>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Send" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hover-me"><a href="#">Transfer to other Bank Account</a><i
+                                class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Transfer to other Bank Account</h3>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Select Bank</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Bank Account" selected>Select Bank</option>
+                                    <option value="Kuda">KUDA</option>
+                                    <option value="Access Bank">Access Bank</option>
+                                    <option value="Zenith Bank">Zenith Bank</option>
+                                    <option value="UBA Bank">UBA Bank</option>
+                                    <option value="Wema Bank">Wema Bank</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Account Number</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Enter Account Number"
+                                        name="account number" required />
+                                </div>
+                                <br>
+                                <h4>Account Name</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter Account Name"
+                                        name="account name" required />
+                                </div>
+                                <br>
+                                <h4>Amount</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Amount" name="Amount"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Transaction Description</h4>
+                                <div class="input-box">
+                                    <input type="text" class="input-field" placeholder="Description" name="Description"
+                                        required />
+                                </div>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Send" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hover-me"><a href="#">Foreign Transfer</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Foreign Transfer</h3>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Select Purpose of Transfer</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Purpose" selected>Select Purpose</option>
+                                    <option value="School">School</option>
+                                    <option value="Taxes">Taxes</option>
+                                    <option value="Airline">Airline</option>
+                                    <option value="Shipping">Shipping</option>
+                                    <option value="Transportation">Transportation</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Description</h4>
+                                <div class="input-box">
+                                    <input type="text" class="input-field" placeholder="Description" name="Description"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Select Currency</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Currency" selected>Select Currency</option>
+                                    <option value="Dollar">Dollar</option>
+                                    <option value="Pounds">Pounds</option>
+                                    <option value="Naira">Naira</option>
+                                    <option value="Cedis">Cedis</option>
+                                    <option value="Yen">Yen</option>
+                                </select>
+                                <br>
+                                <h4>Amount</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Amount" name="Amount"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Account Number</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Enter Account Number"
+                                        name="account number" required />
+                                </div>
+                                <br>
+                                <h4>Name of Beneficiary</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter Beneficiary Name"
+                                        name=" Beneficiary name" required />
+                                </div>
+                                <br>
+                                <h4>Beneficiary Address</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter address"
+                                        name="Beneficiary Address" required />
+                                </div>
+                                <br>
+                                <h4>Beneficiary City</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter City" name="City name"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Select a Country</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Country" selected>Select Country</option>
+                                    <option value="America">United States</option>
+                                    <option value="London">United Kingdom</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Japan">Japan</option>
+                                </select>
+                                <br>
+                                <h4>Bank Address</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter Address" name="Address"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Bank City</h4>
+                                <div class="input-box">
+                                    <input type="letter" class="input-field" placeholder="Enter City" name="City Name"
+                                        required />
+                                </div>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Send" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hover-me"><a href="#">Transfer to card</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Transfer to Card</h3>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Card Account">
+                                    <option value="Select Card Account" selected>Select Card Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Select Currency</h4>
+                                <select name="name" id="name">
+                                    <option value="Select Currency" selected>Select Currency</option>
+                                    <option value="Dollar">Dollar</option>
+                                    <option value="Pounds">Pounds</option>
+                                    <option value="Naira">Naira</option>
+                                    <option value="Cedis">Cedis</option>
+                                    <option value="Yen">Yen</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4>Amount</h4>
+                                <div class="input-box">
+                                    <input type="number" class="input-field" placeholder="Amount" name="Amount"
+                                        required />
+                                </div>
+                                <br>
+                                <h4>Transaction Description</h4>
+                                <div class="input-box">
+                                    <input type="text" class="input-field" placeholder="Description" name="Description"
+                                        required />
+                                </div>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Send" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fas fa-id-card"></i> Pay Bills</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Pay a new bill</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Bill Payment</h3>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4> Category</h4>
+                                <select name="name" id="Select a Category">
+                                    <option value="Select a Category" selected>Select a Category</option>
+                                    <option value="TAXES">TAXES</option>
+                                    <option value="School">SCHOOL</option>
+                                    <option value="Hotels">HOTELS</option>
+                                    <option value="Airlines">AIRLINES</option>
+                                    <option value="Churches">CHURCHES</option>
+                                    <option value="Electricity">ELECTRICITY</option>
+                                    <option value="Fuel">FUEL SERVICE STATION</option>
+                                </select>
+                                <br>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Pay Bill" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li><a href="#">Pay a saved bill</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Search recent Payments</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> Airtime</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Airtime Recharge</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Airtime Recharge</h3>
+                                <br>
+                                <h4> Select a Network</h4>
+                                <select name="name" id="Select Mobile Operator">
+                                    <option value="Select Mobile Operator" selected>Select Mobile Operator</option>
+                                    <option value="name">MTN</option>
+                                    <option value="name">Airtel</option>
+                                    <option value="name">Glo</option>
+                                    <option value="name">9Mobile</option>
+                                    <option value="name">ntel</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Buy Airtime" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hover-me"><a href="#">Buy Data</a><i class="fa fa-angle-right"></i>
+                            <form class="sub-menu-2" action="" method="POST">
+                                <h3>Buy Data</h3>
+                                <br>
+                                <h4> Select a Network</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Mobile Operator</option>
+                                    <option value="name">MTN</option>
+                                    <option value="name">Airtel</option>
+                                    <option value="name">Glo</option>
+                                    <option value="name">9Mobile</option>
+                                    <option value="name">ntel</option>
+                                </select>
+                                <br>
+                                <br>
+                                <h4> Source Account</h4>
+                                <select name="name" id="Select Source Account">
+                                    <option value="Select Source Account" selected>Select Source Account</option>
+                                    <option value="name">Chelsea Ajah</option>
+                                </select>
+                                <br>
+                                <br>
+                                <div class="box">
+                                    <div class="ourbox">
+                                        <input type="submit" value="Buy Data" onclick="validate()">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li><a href="#">Pay saved Top-ups</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Search recent Top-ups</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-th-large"></i> More</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="#">Manage Beneficiaries</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Alerts</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            <span></span>
+            <br>
+            <span></span>
+        </div>
+    </section>
+</body>
+
+</html>
